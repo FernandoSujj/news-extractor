@@ -50,7 +50,12 @@ export async function extractor(url) {
     if (!pageResponse.ok) {
       throw new Error(`HTTP ${pageResponse.status}`);
     }
-    const html = await pageResponse.text();
+    const rawHtml = await pageResponse.text();
+    const html = rawHtml
+      .replace(/<script[\s\S]*?<\/script>/gi, '')
+      .replace(/<style[\s\S]*?<\/style>/gi, '')
+      .replace(/<!--[\s\S]*?-->/g, '')
+      .trim();
 
     const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
     const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite' });

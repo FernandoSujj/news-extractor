@@ -80,7 +80,7 @@ describe('extractor — integração', () => {
   });
 
   it('extrai título, resumo, imagem e tags de uma notícia real', async () => {
-    const url = 'https://www.tecmundo.com.br/seguranca/411216-eua-usaram-claude-ia-para-atacar-ira-mesmo-com-anthropic-banida.htm';
+    const url = 'https://g1.globo.com/economia/noticia/2026/03/05/lucro-da-petrobras.ghtml';
     const result = await extractor(url);
 
     assert.ok(!result.Erro, `Extração falhou: ${result.Erro}`);
