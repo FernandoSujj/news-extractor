@@ -1,0 +1,67 @@
+/* Light theme (default) */
+:root {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --bg: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --error: #ef4444;
+  --error-bg: rgba(239, 68, 68, 0.05);
+  --tag-bg: rgba(99, 102, 241, 0.1);
+  --tag-text: #4f46e5;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark theme (toggled via data-theme attribute) */
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --bg-card: #1e293b;
+  --bg-input: #1e293b;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border: #334155;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --tag-bg: rgba(99, 102, 241, 0.15);
+  --tag-text: #a5b4fc;
+  --error-bg: rgba(239, 68, 68, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+}
+
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}

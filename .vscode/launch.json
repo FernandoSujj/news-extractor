@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Tests (noteExtractor)",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": ["--test"],
+      "program": "${workspaceFolder}/backend/noteExtractor.test.js",
+      "cwd": "${workspaceFolder}/backend",
+      "envFile": "${workspaceFolder}/backend/.env"
+    }
+  ]
+}
